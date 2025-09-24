@@ -15,15 +15,38 @@ It allows users to add, complete, delete, filter, and manage tasks seamlessly. T
 * **Responsive Design** – Works smoothly on desktop and mobile.
 * **Beautiful UI** – Gradient background, glassmorphism style, hover effects, and smooth animations.
 
+# 🌐 Responsive Landing Page
+
+A modern **Responsive Landing Page** built with **HTML, CSS, and JavaScript**, featuring a **dark/light theme toggle**, **sticky header**, and **mobile-friendly navigation**.
+
+---
+
+## 🚀 Features
+
+* 🌙 **Dark/Light Mode** with toggle switch (saved in localStorage).
+* 📱 **Responsive Navigation** with hamburger menu for mobile.
+* 🖱️ **Sticky Header** that changes background on scroll.
+* 🎨 **Hero Section** with background image overlay and CTA button.
+* 🖌️ **Animated Button** with hover effects.
+* 🔗 **Footer with Social Links**.
+* ⚡ **Smooth Animations & Transitions**.
+
+
 ---
 
 ## 📂 Project Structure
 
 ```
+
 📦 dynamic-todo-list
  ┣ 📜 index.html       # Main HTML file
  ┣ 📜 style.css        # CSS file for styling
  ┣ 📜 script.js        # JavaScript for app logic
+
+📦 responsive-landing-page
+ ┣ 📜 index.html       # Main HTML structure
+ ┣ 📜 style.css        # Styles and responsive design
+
  ┗ 📜 README.md        # Documentation
 ```
 
@@ -34,13 +57,20 @@ It allows users to add, complete, delete, filter, and manage tasks seamlessly. T
 1. Clone or download the repository:
 
    ```bash
+
    git clone https://github.com/your-username/dynamic-todo-list.git
+
+   git clone https://github.com/your-username/responsive-landing-page.git
+
    ```
 
 2. Navigate to the project folder:
 
    ```bash
+
    cd dynamic-todo-list
+
+   cd responsive-landing-page
    ```
 
 3. Open `index.html` in your browser.
@@ -62,6 +92,13 @@ It allows users to add, complete, delete, filter, and manage tasks seamlessly. T
 * **CSS3** – Glassmorphism design, gradients, animations
 * **Vanilla JavaScript** – App logic, task management, localStorage
 
+## 💻 Tech Stack
+
+* **HTML5** – Semantic structure
+* **CSS3** – Styling, responsiveness, transitions
+* **Vanilla JavaScript** – Theme toggle, nav toggle, scroll effects
+
+
 ---
 
 ## 📌 Future Improvements
@@ -70,6 +107,11 @@ It allows users to add, complete, delete, filter, and manage tasks seamlessly. T
 * [ ] Add **Dark/Light Theme Toggle**
 * [ ] Sync tasks with **cloud database** for multi-device support
 * [ ] Drag & Drop to reorder tasks
+
+* [ ] Add **scroll reveal animations**.
+* [ ] Add **multiple sections** (About, Services, Contact).
+* [ ] Improve **SEO optimization** with meta tags.
+* [ ] Add **form validation** for contact section.
 
 ---
 

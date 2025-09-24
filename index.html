@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic To-Do List</title>
@@ -52,5 +53,93 @@
     </div>
 
     <script src="script.js"></script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Landing Page</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">NG</div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="menu-toggle">&#9776;</div>
+    </nav>
+
+    <!-- Theme Toggle Switch with Icons -->
+    <label class="theme-switch">
+      <input type="checkbox" id="theme-toggle">
+      <span class="slider">
+        <span class="icon sun">☀️</span>
+        <span class="icon moon">🌙</span>
+      </span>
+    </label>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Our Landing Page</h1>
+      <p>We help you build amazing responsive websites with ease.</p>
+      <a href="#" class="btn">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 MyWebsite | All rights reserved.</p>
+    <div class="social-links">
+      <a href="#">🌐</a>
+      <a href="#">🐦</a>
+      <a href="#">📘</a>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Theme toggle
+    const themeToggle = document.getElementById('theme-toggle');
+
+    // Load saved theme
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-mode");
+      themeToggle.checked = true;
+    }
+
+    themeToggle.addEventListener('change', () => {
+      if (themeToggle.checked) {
+        document.body.classList.add("dark-mode");
+        localStorage.setItem("theme", "dark");
+      } else {
+        document.body.classList.remove("dark-mode");
+        localStorage.setItem("theme", "light");
+      }
+    });
+
+    // Sticky header background on scroll
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>
