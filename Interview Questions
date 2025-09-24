@@ -1,0 +1,139 @@
+### 1. What is semantic HTML?
+
+Semantic HTML uses elements that carry **meaning** about the type of content they hold, improving accessibility and SEO.
+Examples:
+
+* `<header>` → Page or section header
+* `<nav>` → Navigation links
+* `<article>` → Independent piece of content
+* `<footer>` → Footer content
+
+✅ Helps screen readers, search engines, and developers understand the structure better.
+
+---
+
+### 2. How does CSS Flexbox differ from Grid?
+
+* **Flexbox**: One-dimensional layout system (row **or** column). Best for aligning items along a single axis.
+* **Grid**: Two-dimensional layout system (rows **and** columns). Best for complex layouts.
+
+Example:
+
+```css
+/* Flexbox */
+.container { display: flex; }
+
+/* Grid */
+.container { display: grid; grid-template-columns: 1fr 1fr; }
+```
+
+---
+
+### 3. What are media queries?
+
+Media queries are CSS rules that apply styles based on device properties like screen width, height, or orientation.
+Example:
+
+```css
+@media (max-width: 768px) {
+  body { font-size: 14px; }
+}
+```
+
+✅ Essential for responsive design.
+
+---
+
+### 4. How do you make a website responsive?
+
+* Use **relative units** (%, `em`, `rem`, `vh/vw`) instead of fixed px.
+* Apply **media queries** for different breakpoints.
+* Use **flexbox** and **grid** for layouts.
+* Make images/videos **responsive** using `max-width: 100%`.
+* Test on multiple screen sizes.
+
+---
+
+### 5. Explain the box model.
+
+Every element in CSS is a rectangular box consisting of:
+
+1. **Content** – Text or image inside.
+2. **Padding** – Space between content and border.
+3. **Border** – Surrounds padding/content.
+4. **Margin** – Space outside the border.
+
+Formula for total size:
+`Total Width = Content + Padding + Border + Margin`
+
+---
+
+### 6. What is the difference between classes and IDs in CSS?
+
+* **Class (`.classname`)**: Can be used multiple times on multiple elements.
+* **ID (`#idname`)**: Unique to a single element in a page.
+* **Specificity**: ID has higher specificity than class.
+
+Example:
+
+```css
+#unique { color: red; }   /* ID */
+.common { color: blue; }  /* Class */
+```
+
+---
+
+### 7. How can you optimize CSS for performance?
+
+* Minify CSS files.
+* Combine multiple CSS files into one to reduce HTTP requests.
+* Use shorthand properties (`margin: 10px 20px;`).
+* Remove unused CSS (e.g., with PurgeCSS).
+* Use efficient selectors (avoid deeply nested selectors).
+* Use CSS variables for maintainability.
+* Prefer `transform` and `opacity` over costly properties like `top/left` for animations.
+
+---
+
+### 8. What is the difference between relative and absolute positioning?
+
+* **Relative**: Positioned relative to its normal position.
+* **Absolute**: Positioned relative to the nearest ancestor that has a `position` other than `static`.
+
+Example:
+
+```css
+.relative { position: relative; top: 10px; }
+.absolute { position: absolute; top: 20px; left: 30px; }
+```
+
+---
+
+### 9. How does the z-index property work?
+
+* `z-index` controls the **stacking order** of elements along the z-axis.
+* Higher `z-index` values appear in front of lower ones.
+* Works only on elements with `position` set to `relative`, `absolute`, or `fixed`.
+
+Example:
+
+```css
+.box1 { position: relative; z-index: 1; }
+.box2 { position: relative; z-index: 10; } /* appears on top */
+```
+
+---
+
+### 10. What is the difference between padding and margin?
+
+* **Padding**: Space **inside** the element, between content and border.
+* **Margin**: Space **outside** the element, between border and neighboring elements.
+
+Example:
+
+```css
+.box {
+  margin: 20px;  /* outside space */
+  padding: 10px; /* inside space */
+}
+```
