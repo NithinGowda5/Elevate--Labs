@@ -1,6 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>My Tasks</h1>
+            <p>Stay organized and get things done</p>
+        </div>
+
+        <div class="input-section">
+            <input type="text" class="task-input" placeholder="Add a new task..." id="taskInput" maxlength="100">
+            <button class="add-btn" onclick="addTask()">Add</button>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number" id="totalTasks">0</div>
+                <div class="stat-label">Total</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="completedTasks">0</div>
+                <div class="stat-label">Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="pendingTasks">0</div>
+                <div class="stat-label">Pending</div>
+            </div>
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterTasks('all')">All</button>
+            <button class="filter-btn" onclick="filterTasks('pending')">Pending</button>
+            <button class="filter-btn" onclick="filterTasks('completed')">Completed</button>
+        </div>
+
+        <div class="tasks-container" id="tasksContainer">
+            <div class="empty-state" id="emptyState">
+                <h3>No tasks yet</h3>
+                <p>Add your first task to get started!</p>
+            </div>
+        </div>
+
+        <button class="clear-completed" onclick="clearCompleted()" id="clearBtn" disabled>
+            Clear Completed Tasks
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Responsive Landing Page</title>
