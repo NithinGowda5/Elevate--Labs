@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* smooth scrolling */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  transition: background 0.4s, color 0.4s;
+}
+
+header {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(51,51,51,0.3); /* transparent light mode */
+  color: #fff;
+  transition: background 0.4s;
+  z-index: 1000;
+}
+
+header.scrolled {
+  background: rgba(51,51,51,0.9); /* darker on scroll */
+}
+
+body.dark-mode header {
+  background: #1f1f1f; /* solid dark in dark mode */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f4b400;
+}
+
+/* Mobile nav toggle */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+  background: url('https://picsum.photos/1600/900') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 1rem;
+  position: relative;
+  margin-top: 70px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  z-index: 0;
+}
+
+body.dark-mode .hero::before {
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Animated Button */
+.btn {
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(90deg, #f4b400, #e89c00);
+  color: #333;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1;
+  position: relative;
+  transition: all 0.4s ease;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #e89c00, #f4b400);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Sections */
+.section {
+  padding: 4rem 2rem;
+  min-height: 80vh;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #333;
+  color: #fff;
+}
+
+body.dark-mode footer {
+  background: #1f1f1f;
+}
+
+.social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #f4b400;
+}
+
+body.dark-mode {
+  background: #121212;
+  color: #eee;
+}
+
+body.dark-mode a {
+  color: #eee;
+}
+
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 28px;
+  margin-left: 1rem;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+  font-size: 14px;
+}
+
+.slider .icon {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+input:checked + .slider {
+  background-color: #f4b400;
+}
+
+input:checked + .slider:before {
+  transform: translateX(32px);
+}
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(51,51,51,0.9);
+    flex-direction: column;
+    width: 200px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
